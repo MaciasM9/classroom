@@ -1,0 +1,19 @@
+<div class="col-sm-8 col-md-offset-2" style="font-size:20px">
+
+<p id="notice"><%= notice %></p>
+<strong>Project name:</strong>
+<div class="well well-sm">
+<p>
+  <%= @project.project_name %>
+</p>
+</div>
+<strong>Project description:</strong>
+<div class="well well-sm">
+<p>
+  
+  <%= @project.project_description %>
+</p>
+</div>
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
+</div>	

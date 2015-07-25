@@ -1,0 +1,18 @@
+<div class="row" style="font-size:20px">
+	<div class="col-sm-8 col-md-offset-2">
+	<h1>Editing Course</h1>	
+</div>
+
+</div>
+<%= render 'form' %>
+<div class="col-sm-8 col-md-offset-2" style="font-size:20px">
+    <%= link_to 'Show', @course %>  |
+<%= link_to 'Back', courses_path %> | 
+	<%= link_to new_activity_path(id: @course.id) do%>
+    <i class="glyphicon glyphicon-plus" ></i> Add Activity
+    <% end %>|
+    <%= link_to new_project_path(id: @course.id) do%>
+    <i class="glyphicon glyphicon-plus" ></i> Add Project
+    <% end %>
+</div>
+

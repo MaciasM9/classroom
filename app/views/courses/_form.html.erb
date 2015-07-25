@@ -1,0 +1,26 @@
+<%= bootstrap_form_for(@course, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-6") do |f| %>
+  <% if @course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+      <ul>
+      <% @course.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :course_name %>
+  </div>
+  <div class="field">
+    <%= f.text_area :content %>
+  </div>
+   
+  <%= f.form_group do %>
+     <div class="actions">
+    <%= f.primary%>
+    </div>
+     <% end %>
+<% end %>

@@ -1,0 +1,24 @@
+<div class="col-sm-8 col-md-offset-2" style="font-size:20px">
+<div class="alert">
+	<p id="notice"><%= notice %></p>	
+</div>
+
+<strong>Course name:</strong>
+<div class="well well-sm">
+	<p>
+  <%= @course.course_name %>
+</p>
+</div>
+<strong>Content:</strong>
+<div class="well well-sm">
+	<p>
+  	<%= @course.content %>
+	</p>	
+</div>
+
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>
+<%= render "activities/index" %>
+<%= render "projects/index" %>
+</div>

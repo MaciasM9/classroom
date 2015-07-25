@@ -1,0 +1,26 @@
+<div class="col-sm-8 col-md-offset-2" style="font-size:20px">
+<div class="alert">
+	<p id="notice"><%= notice %></p>	
+</div>
+<strong>Activity name:</strong>
+<div class="well well-sm">
+<p>
+  
+  <%= @activity.activity_name %> 
+</p>
+</div>	
+<strong>Activity content:</strong>
+<div class="well well-sm">
+<p>
+  <%= @activity.activity_content %>
+</p>
+</div>	
+	<strong>Grade:</strong>
+<div class="well well-sm">
+<p>
+  <%= @activity.grade %>
+</p>
+</div>
+<%= link_to 'Edit', edit_activity_path(@activity) %> |
+<%= link_to 'Back', activities_path %>
+</div>
